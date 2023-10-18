@@ -21,6 +21,9 @@ const SignUp = () => {
     const password1 = form.get("password1");
     const password2 = form.get("password2");
 
+    const user = {userName, photoURL, email, password1}
+    console.log(user);
+
     const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$/;
     if (password1 !== password2) {
       toast.error("Please confirm your password");
@@ -42,6 +45,19 @@ const SignUp = () => {
             });
           logOut().then().catch();
           navigate("/login")
+
+          fetch("http://localhost:3000/users", {
+            method: "POST",
+            headers:{
+              "content-type" : "application/json"
+            },
+            body: JSON.stringify(user)
+          })
+          .then(res=> res.json())
+          .then(data=>{
+            console.log(data);
+          })
+
         })
         .catch((err) => {
           toast.error(err.message);

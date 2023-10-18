@@ -4,6 +4,7 @@ import defaultUser from "./../../assets/user.png";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import logo from "./../../assets/favicon.png";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -23,27 +24,15 @@ const Navbar = () => {
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      {/* <li>
-        <NavLink to={"/allEvents"}>Events</NavLink>
-      </li> */}
       <li>
-        <NavLink to={"/allServices"}>Services</NavLink>
+        <NavLink to={"/addCars"}>Add Cars</NavLink>
       </li>
-      {/* <li>
-        <NavLink to={"/venues"}>Venues</NavLink>
-      </li> */}
+      <li>
+        <NavLink to={"/cart"}>Cart</NavLink>
+      </li>
       <li>
         <NavLink to={"/about"}>About</NavLink>
       </li>
-      {/* <li>
-        <NavLink to={"/teams"}>Teams</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/gallery"}>Gallery</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/contact"}>Contact</NavLink>
-      </li> */}
     </>
   );
 
@@ -75,7 +64,10 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <p className="text-xl font-bold text-[#A68D5B]">carMart</p>
+          <div className="flex justify-center items-center gap-1">
+            <img className="w-10" src={logo} alt="" />
+            <p className="text-xl font-bold text-[#A68D5B]">carMart</p>
+          </div>
         </div>
 
         <div className="navbar-center hidden lg:flex">
@@ -107,10 +99,7 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <Link
-              to={"/login"}
-              className="btn btn-sm btn-neutral normal-case"
-            >
+            <Link to={"/login"} className="btn btn-sm btn-neutral normal-case">
               Log In
             </Link>
           )}

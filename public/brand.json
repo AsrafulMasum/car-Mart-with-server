@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Ford",
+    "country": "United States",
+    "founded": 1903,
+    "popularModels": ["F-150", "Escape", "Explorer"],
+    "image": "https://i.postimg.cc/Z53DWP6Z/ford-logo.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tesla",
+    "country": "United States",
+    "founded": 2003,
+    "popularModels": ["Model S", "Model 3", "Model X", "Model Y"],
+    "image": "https://i.postimg.cc/Z5VjBf0G/tesla-logo.jpg"
+  },
+  {
+    "id": 3,
+    "name": "BMW",
+    "country": "Germany",
+    "founded": 1916,
+    "popularModels": ["3 Series", "5 Series", "X3", "X5"],
+    "image": "https://i.postimg.cc/cCvG2K2H/vmw-logo.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mercedes-Benz",
+    "country": "Germany",
+    "founded": 1926,
+    "popularModels": ["C-Class", "E-Class", "S-Class", "GLC"],
+    "image": "https://i.postimg.cc/4yng7JCr/benz-logo.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Range Rover",
+    "country": "United Kingdom",
+    "founded": 1970,
+    "popularModels": ["Range Rover Evoque", "Range Rover Sport", "Range Rover Velar"],
+    "image": "https://i.postimg.cc/L816hWyX/rover-logo.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rolls-Royce",
+    "country": "United Kingdom",
+    "founded": 1906,
+    "popularModels": ["Phantom", "Ghost", "Cullinan"],
+    "image": "https://i.postimg.cc/j5rWsTtt/Rolls-Royce-logo.jpg"
+  }
+]
