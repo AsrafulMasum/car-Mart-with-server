@@ -6,6 +6,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import AboutPage from "../Pages/About/AboutPage";
 import AddCars from "../Pages/addCars/AddCars";
+import BrandCar from "../Pages/BrandCar/BrandCar";
 
 const Routes = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/cars/:brand",
+        element: <BrandCar></BrandCar>,
+        loader: () => fetch('http://localhost:3000/cars')
       },
       {
         path: "/login",

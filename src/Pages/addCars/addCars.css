@@ -1,0 +1,8 @@
+div section{
+  background-image: url('https://i.postimg.cc/9FnK9wZL/about-Page-Banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-blend-mode: overlay;
+}

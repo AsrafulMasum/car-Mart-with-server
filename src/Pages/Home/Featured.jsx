@@ -8,7 +8,7 @@ const Featured = () => {
       .then((res) => res.json())
       .then((data) => setBrandCars(data));
   }, []);
-  console.log(brandCars);
+
   return (
     <div className="my-10">
       <h2 className="text-4xl text-center font-semibold text-[#A55C30]">Featured Brands</h2>
