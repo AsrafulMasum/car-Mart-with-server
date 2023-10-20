@@ -26,7 +26,7 @@ const UpdateCar = () => {
       description,
     };
 
-    fetch(`http://localhost:3000/cars/${car?._id}`, {
+    fetch(`https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cars/${car?._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

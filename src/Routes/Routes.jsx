@@ -25,7 +25,7 @@ const Routes = createBrowserRouter([
       {
         path: "/cars/:brand",
         element: <PrivateRoutes><BrandCar></BrandCar></PrivateRoutes>,
-        loader: () => fetch('http://localhost:3000/cars')
+        loader: () => fetch('https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cars')
       },
       {
         path: "/login",
@@ -46,17 +46,17 @@ const Routes = createBrowserRouter([
       {
         path:"/carsDetails/:id",
         element: <PrivateRoutes><CarDetails></CarDetails></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:3000/cars/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cars/${params.id}`)
       },
       {
         path: "/cart",
         element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
-        loader: () => fetch("http://localhost:3000/cart")
+        loader: () => fetch("https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cart")
       },
       {
         path: "/updateCar/:id",
         element: <PrivateRoutes><UpdateCar></UpdateCar></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:3000/cars/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cars/${params.id}`)
       }
     ],
   },

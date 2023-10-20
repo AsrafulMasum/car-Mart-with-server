@@ -1,6 +1,17 @@
 import PropTypes from "prop-types";
 
 const CartItemCard = ({ car }) => {
+
+  const handleDelete = (id) => {
+    fetch(`https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cart/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
   return (
     <div>
       <div className="flex overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
@@ -21,7 +32,9 @@ const CartItemCard = ({ car }) => {
             <h1 className="text-lg font-bold text-gray-700 dark:text-gray-200 md:text-xl">
               $ {car?.price}
             </h1>
-            <button className="btn">Delete</button>
+            <button onClick={() => handleDelete(car?._id)} className="btn">
+              Delete
+            </button>
           </div>
         </div>
       </div>
