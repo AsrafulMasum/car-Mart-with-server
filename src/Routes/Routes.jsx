@@ -7,6 +7,8 @@ import Home from "../Pages/Home/Home";
 import AboutPage from "../Pages/About/AboutPage";
 import AddCars from "../Pages/addCars/AddCars";
 import BrandCar from "../Pages/BrandCar/BrandCar";
+import CarDetails from "../Pages/BrandCar/CarDetails";
+import Cart from "../Pages/Cart/Cart";
 
 const Routes = createBrowserRouter([
   {
@@ -38,6 +40,16 @@ const Routes = createBrowserRouter([
       {
         path: "/addCars",
         element: <AddCars></AddCars>
+      },
+      {
+        path:"/carsDetails/:id",
+        element: <CarDetails></CarDetails>,
+        loader: ({params}) => fetch(`http://localhost:3000/cars/${params.id}`)
+      },
+      {
+        path: "/cart",
+        element: <Cart></Cart>,
+        loader: () => fetch("http://localhost:3000/cart")
       }
     ],
   },

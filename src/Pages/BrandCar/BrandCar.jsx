@@ -19,7 +19,7 @@ const BrandCar = () => {
       <h2 className="text-4xl font-semibold text-center mb-10">All the available cars from {brand}.</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {
-          currentBrandCars?.map(car => <CarCard key={car._id} car={car}></CarCard>)
+          currentBrandCars?.map(car => <CarCard key={car._id} car={car}></CarCard>) 
         }
       </div>
     </div>

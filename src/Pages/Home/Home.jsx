@@ -1,6 +1,7 @@
 import About from "./About";
 import Featured from "./Featured";
 import Hero from "./Hero";
+import SellCars from "./SellCars";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Hero></Hero>
       <About></About>
       <Featured></Featured>
+      <SellCars></SellCars>
     </div>
   );
 };
