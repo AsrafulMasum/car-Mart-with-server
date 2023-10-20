@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { AiFillStar } from 'react-icons/ai';
 
 const CarCard = ({ car }) => {
 
@@ -19,6 +20,9 @@ const CarCard = ({ car }) => {
             <span className="font-bold text-gray-800 dark:text-gray-200">
               $ {car?.price}
             </span>
+            <div className="flex items-center gap-1 font-bold text-gray-800 dark:text-gray-200">
+              <AiFillStar></AiFillStar> <p className="px-2 bg-slate-900 rounded">{car?.rating}</p>
+            </div>
             <Link to={`/carsDetails/${car?._id}`} className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
               Details
             </Link>
