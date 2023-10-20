@@ -4,7 +4,6 @@ import CartItemCard from "./CartItemCard";
 const Cart = () => {
 
   const cartItem = useLoaderData()
-  console.log(cartItem);
 
   return (
     <div className="my-10">
