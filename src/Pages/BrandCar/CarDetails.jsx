@@ -6,7 +6,7 @@ const CarDetails = () => {
 
   const handleAddToCart = () => {
     toast.success("Added to your cart.")
-    fetch("https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cart", {
+    fetch("https://assignment10-rho.vercel.app/cart", {
       method: "POST",
       headers:{
         "content-type": "application/json"

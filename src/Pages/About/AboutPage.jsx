@@ -4,7 +4,7 @@ import img2 from "./../../assets/about.png"
 const AboutPage = () => {
   return (
     <div>
-      <section className="flex items-center justify-between bg-slate-200 py-10 px-10 rounded-lg">
+      <section className="flex flex-col md:flex-row items-center justify-between bg-slate-200 py-10 px-10 rounded-lg">
         <h2 className="text-5xl font-bold text-slate-800">Our Brief History</h2>
         <img className="h-52" src="https://i.postimg.cc/x8ygbWYS/inner-banner-img.png" alt="" />
       </section>

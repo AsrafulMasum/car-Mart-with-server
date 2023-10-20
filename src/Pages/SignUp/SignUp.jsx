@@ -46,7 +46,7 @@ const SignUp = () => {
           logOut().then().catch();
           navigate("/login")
 
-          fetch("https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/users", {
+          fetch("https://assignment10-rho.vercel.app/users", {
             method: "POST",
             headers:{
               "content-type" : "application/json"

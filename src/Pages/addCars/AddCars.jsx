@@ -23,7 +23,7 @@ const AddCars = () => {
       description,
     };
 
-    fetch("https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cars", {
+    fetch("https://assignment10-rho.vercel.app/cars", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -26,7 +26,7 @@ const UpdateCar = () => {
       description,
     };
 
-    fetch(`https://assignment10-htbz3t628-masums-projects-7aa1af27.vercel.app/cars/${car?._id}`, {
+    fetch(`https://assignment10-rho.vercel.app/cars/${car?._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -58,7 +58,7 @@ const UpdateCar = () => {
 
               <form
                 onSubmit={handleUpdate}
-                className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2"
+                className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-2"
               >
                 <div>
                   <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
@@ -138,7 +138,7 @@ const UpdateCar = () => {
                   />
                 </div>
 
-                <div className="col-span-2">
+                <div className="lg:col-span-2">
                   <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
                     Description
                   </label>
@@ -151,7 +151,7 @@ const UpdateCar = () => {
                   />
                 </div>
 
-                <button className="col-span-2 flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                <button className="lg:col-span-2 flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                   <span>Update</span>
 
                   <svg
