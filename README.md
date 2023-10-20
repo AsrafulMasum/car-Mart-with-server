@@ -5,16 +5,12 @@
 Click here for the live website link: [https://car-mart-789fb.web.app/](https://car-mart-789fb.web.app/)
 
 # 5 main features of my project are :
-  * In the navbar if users click on the links they will redirects to the specific pages they clicked.
+  * In the navbar there is a login button. On clicking on that button user can log in or sign up.
 
-  * In the banner section if users click the View Events button they will redirects to the Events page. 
+  * After the navbar there is a dark mode toggle button. On clicking on the button user can toggle the theme to light to dark , or dark to light. 
 
-  * In the events section or Events page if users click on the See details button on the event card they will see the details about that events same goes for venues section or Venues page.
+  * In the navbar there is a button add cars. On clicking this button user can find a form to add cars to website.
 
-  * In the services section or Services page if users click on the See more links on the service card they will see the details about that service.
+  * There is a dream car section where some brand card available on clicking on the brand card itwill redirects to a new route where we can see the cars of that brand.
 
-  * There is a button at the end of the services section named as See All Services. If users click on the button they will redirects to the Services page same goes for venues section.
-
-  * If users want to go to a private page they need to login first. If they didn't have accounts they need to sign up first. After sign up they will redirects to the log in page & need to login for visiting the private page. after log in they will redirects to that specific page they want to visit.
-
-  * If users want to logout they need to click on the users image on the navbar & find the logout button then they need to click on the logout button.
+  * In the navbar there is a cart button. On clicking the button the user can see the cart items.

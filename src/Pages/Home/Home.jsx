@@ -6,7 +6,7 @@ import SellCars from "./SellCars";
 
 const Home = () => {
   const [toggle, setToggle] = useState(false);
-  console.log(toggle);
+
   if (toggle) {
     document.getElementById("theme").setAttribute("data-theme", "dark");
   }else{
