@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const CarDetails = () => {
   const car = useLoaderData();
 
   const handleAddToCart = () => {
+    toast.success("Added to your cart.")
     fetch("http://localhost:3000/cart", {
       method: "POST",
       headers:{

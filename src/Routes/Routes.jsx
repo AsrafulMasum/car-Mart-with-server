@@ -9,6 +9,7 @@ import AddCars from "../Pages/addCars/AddCars";
 import BrandCar from "../Pages/BrandCar/BrandCar";
 import CarDetails from "../Pages/BrandCar/CarDetails";
 import Cart from "../Pages/Cart/Cart";
+import UpdateCar from "../Pages/Update/UpdateCar";
 
 const Routes = createBrowserRouter([
   {
@@ -50,6 +51,11 @@ const Routes = createBrowserRouter([
         path: "/cart",
         element: <Cart></Cart>,
         loader: () => fetch("http://localhost:3000/cart")
+      },
+      {
+        path: "/updateCar/:id",
+        element: <UpdateCar></UpdateCar>,
+        loader: ({params}) => fetch(`http://localhost:3000/cars/${params.id}`)
       }
     ],
   },
