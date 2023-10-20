@@ -10,6 +10,7 @@ import BrandCar from "../Pages/BrandCar/BrandCar";
 import CarDetails from "../Pages/BrandCar/CarDetails";
 import Cart from "../Pages/Cart/Cart";
 import UpdateCar from "../Pages/Update/UpdateCar";
+import PrivateRoutes from "./PrivateRoutes";
 
 const Routes = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/cars/:brand",
-        element: <BrandCar></BrandCar>,
+        element: <PrivateRoutes><BrandCar></BrandCar></PrivateRoutes>,
         loader: () => fetch('http://localhost:3000/cars')
       },
       {
@@ -36,25 +37,25 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <AboutPage></AboutPage>
+        element: <PrivateRoutes><AboutPage></AboutPage></PrivateRoutes>
       },
       {
         path: "/addCars",
-        element: <AddCars></AddCars>
+        element: <PrivateRoutes><AddCars></AddCars></PrivateRoutes>
       },
       {
         path:"/carsDetails/:id",
-        element: <CarDetails></CarDetails>,
+        element: <PrivateRoutes><CarDetails></CarDetails></PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:3000/cars/${params.id}`)
       },
       {
         path: "/cart",
-        element: <Cart></Cart>,
+        element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
         loader: () => fetch("http://localhost:3000/cart")
       },
       {
         path: "/updateCar/:id",
-        element: <UpdateCar></UpdateCar>,
+        element: <PrivateRoutes><UpdateCar></UpdateCar></PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:3000/cars/${params.id}`)
       }
     ],

@@ -21,6 +21,7 @@ const CartItemCard = ({ car }) => {
             <h1 className="text-lg font-bold text-gray-700 dark:text-gray-200 md:text-xl">
               $ {car?.price}
             </h1>
+            <button className="btn">Delete</button>
           </div>
         </div>
       </div>
