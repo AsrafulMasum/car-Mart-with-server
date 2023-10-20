@@ -2,33 +2,28 @@ import PropTypes from "prop-types";
 import Swal from "sweetalert2";
 
 const CartItemCard = ({ car, handleCartItem }) => {
-
   const handleDelete = (id) => {
-    handleCartItem(id)
     Swal.fire({
-      title: 'Are you sure?',
+      title: "Are you sure?",
       text: "You won't be able to revert this!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        fetch(`https://assignment10-rho.vercel.app/cart/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+        handleCartItem(id);
       }
-    })
-    fetch(`https://assignment10-rho.vercel.app/cart/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    });
   };
 
   return (
@@ -65,5 +60,5 @@ export default CartItemCard;
 
 CartItemCard.propTypes = {
   car: PropTypes.object,
-  handleCartItem: PropTypes.func
+  handleCartItem: PropTypes.func,
 };
